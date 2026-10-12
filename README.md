@@ -133,16 +133,40 @@ py -m streamlit run Prognoz_app.py
    - прогноз полной стоимости квартиры;
    - прогноз цены за м².
 
+## Результаты
+
+### Влияние расстояния до центра
+
+<img width="850" height="512" alt="rastoyanie" src="https://github.com/user-attachments/assets/ee7cf941-5c1c-481e-a439-e67946fc5adb" />
+
+Медианная цена за м² заметно снижается по мере удаления от Красной площади:
+от ~641 тыс. ₽/м² в зоне 0–3 км до ~205 тыс. ₽/м² за пределами 30 км.
+
+### Сравнение моделей
+
+| Model | CV MAE, млн ₽ ↓ | CV MAE std, млн ₽ | CV RMSE, млн ₽ ↓ | CV RMSE std, млн ₽ | CV R² ↑ | CV R² std |
+|---|---:|---:|---:|---:|---:|---:|
+| Tuned Random Forest log | **4.021** | 0.074 | 11.807 | 1.402 | 0.913 | 0.017 |
+| Tuned Random Forest | 4.066 | 0.057 | **11.539** | 1.065 | **0.917** | 0.012 |
+| Tuned Gradient Boosting | 4.612 | **0.014** | 11.698 | 0.914 | 0.915 | 0.010 |
+| Random Forest | 4.614 | 0.040 | 12.765 | 0.805 | 0.898 | 0.009 |
+| Gradient Boosting | 6.013 | 0.007 | 14.017 | 0.633 | 0.878 | **0.007** |
+| Linear Regression | 8.007 | 0.040 | 17.004 | **0.395** | 0.820 | 0.010 |
+
+### Важность признаков
+
+<img width="889" height="590" alt="priznak" src="https://github.com/user-attachments/assets/a30a6207-db3c-459f-b890-22afbff54844" />
+
+Наибольший вклад в прогноз дают площадь квартиры,
+расстояние до центра, количество комнат и район.
+
+### Фактическая и прогнозируемая стоимость
+
+<img width="790" height="690" alt="prognoz" src="https://github.com/user-attachments/assets/cd0f253e-7678-4c17-8d73-3677634e196d" />
+
 ## Технологии
 
-- Python
-- pandas
-- NumPy
-- Matplotlib
-- SciPy
-- scikit-learn
-- Streamlit
-- joblib
+- Python - pandas - NumPy - Matplotlib - SciPy - scikit-learn - Streamlit
 
 ## Воспроизводимость
 
