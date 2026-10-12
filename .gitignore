@@ -1,0 +1,21 @@
+# dataset
+realty_data.csv
+
+# virtual environment
+.venv/
+venv/
+
+# python cache
+__pycache__/
+*.py[cod]
+
+# jupyter
+.ipynb_checkpoints/
+
+# IDE
+.vscode/
+.idea/
+
+# system files
+.DS_Store
+Thumbs.db
