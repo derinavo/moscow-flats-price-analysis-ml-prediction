@@ -135,12 +135,7 @@ py -m streamlit run Prognoz_app.py
 
 ## Результаты
 
-### Влияние расстояния до центра
-
-<img width="850" height="512" alt="rastoyanie" src="https://github.com/user-attachments/assets/ee7cf941-5c1c-481e-a439-e67946fc5adb" />
-
-Медианная цена за м² заметно снижается по мере удаления от Красной площади:
-от ~641 тыс. ₽/м² в зоне 0–3 км до ~205 тыс. ₽/м² за пределами 30 км.
+<img width="426" height="240" alt="gifPrognoz" src="https://github.com/user-attachments/assets/6a873886-0500-49cf-ae6d-3c235a81ddb5" />
 
 ### Сравнение моделей
 
@@ -164,9 +159,12 @@ py -m streamlit run Prognoz_app.py
 
 <img width="790" height="690" alt="prognoz" src="https://github.com/user-attachments/assets/cd0f253e-7678-4c17-8d73-3677634e196d" />
 
-## Технологии
+### Влияние расстояния до центра
 
-- Python - pandas - NumPy - Matplotlib - SciPy - scikit-learn - Streamlit
+<img width="850" height="512" alt="rastoyanie" src="https://github.com/user-attachments/assets/ee7cf941-5c1c-481e-a439-e67946fc5adb" />
+
+Медианная цена за м² заметно снижается по мере удаления от Красной площади:
+от ~641 тыс. ₽/м² в зоне 0–3 км до ~205 тыс. ₽/м² за пределами 30 км.
 
 ## Воспроизводимость
 
@@ -178,6 +176,9 @@ py -m streamlit run Prognoz_app.py
 
 Прогноз является модельной оценкой и не заменяет профессиональную оценку недвижимости!
 
-## Автор
-
 Учебный проект по анализу данных и машинному обучению.
+
+## Технологии
+
+Python - pandas - NumPy - Matplotlib - SciPy - scikit-learn - Streamlit
+
